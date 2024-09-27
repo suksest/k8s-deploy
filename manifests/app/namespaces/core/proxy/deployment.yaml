@@ -14,10 +14,13 @@ spec:
     spec:
       containers:
       - name: proxy
-        image: nginx:alpine
+        image: nginxinc/nginx-unprivileged:stable-alpine-slim
         resources:
           limits:
             memory: "128Mi"
-            cpu: "500m"
+            cpu: "100m"
+          requests:
+            memory: "10Mi"
+            cpu: "10m"
         ports:
         - containerPort: 80
