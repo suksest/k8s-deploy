@@ -29,11 +29,11 @@ spec:
             name: postgres-pvc
         resources:
           limits:
+            memory: "4Gi"
+            cpu: "2"
+          requests:
             memory: "2Gi"
             cpu: "1"
-          requests:
-            memory: "1Gi"
-            cpu: "500m"
   volumeClaimTemplates:
   - metadata:
       name: postgres-pvc
