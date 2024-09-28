@@ -5,5 +5,5 @@ resources:
   - configmap.yaml
   - pv.yaml
   - pvc.yaml
-  - deployment.yaml
+  - statefulset.yaml
   - services.yaml
