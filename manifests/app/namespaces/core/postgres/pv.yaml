@@ -7,7 +7,6 @@ metadata:
     type: local
     app: postgres
 spec:
-  storageClassName: do-block-storage
   capacity:
     storage: 10Gi
   accessModes:
