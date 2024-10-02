@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: consul
+      chart: bitnami/consul
       version: 11.3.16
       sourceRef:
         kind: HelmRepository
