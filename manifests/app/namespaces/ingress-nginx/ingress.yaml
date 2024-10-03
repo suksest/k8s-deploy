@@ -14,6 +14,14 @@ spec:
   type: ExternalName
   externalName: transaction.core.svc
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+spec:
+  type: ExternalName
+  externalName: grafana.monitoring.svc
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -58,5 +66,25 @@ spec:
         backend:
           service:
             name: transaction
+            port: 
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana
+  labels:
+    name: grafana
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: grafana.setyaji.my.id
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: grafana
             port: 
               number: 80
