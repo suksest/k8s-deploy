@@ -20,8 +20,15 @@ metadata:
   name: product
   labels:
     name: product
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - product.setyaji.my.id
+    - transaction.setyaji.my.id
+    secretName: app-tls
   rules:
   - host: product.setyaji.my.id
     http:
