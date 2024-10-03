@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: transaction
 spec:
-  type: ClusterIP
   selector:
     app: transaction
   ports:
