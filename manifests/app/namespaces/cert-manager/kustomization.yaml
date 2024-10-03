@@ -5,4 +5,4 @@ metadata:
 
 resources:
   - namespace.yaml
-  - ../../../../manifests/app/cert-manager/cert-manager.yaml
+  - ../../../../modules/helm/cert-manager/helm-repository.yaml
