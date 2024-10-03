@@ -7,3 +7,4 @@ resources:
   - namespace.yaml
   - ../../../../modules/helm/cert-manager/helm-repository.yaml
   - release.yaml
+  - issuer.yaml
