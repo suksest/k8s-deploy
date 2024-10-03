@@ -12,6 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: cert-manager
+        namespace: cert-manager
       interval: 5m
   releaseName: cert-manager
   values:
