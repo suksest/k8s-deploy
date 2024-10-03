@@ -35,7 +35,6 @@ spec:
   tls:
   - hosts:
     - product.setyaji.my.id
-    - transaction.setyaji.my.id
     secretName: app-tls
   rules:
   - host: product.setyaji.my.id
@@ -55,8 +54,14 @@ metadata:
   name: transaction
   labels:
     name: transaction
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - transaction.setyaji.my.id
+    secretName: app-tls
   rules:
   - host: transaction.setyaji.my.id
     http:
@@ -75,8 +80,14 @@ metadata:
   name: grafana
   labels:
     name: grafana
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - grafana.setyaji.my.id
+    secretName: app-tls
   rules:
   - host: grafana.setyaji.my.id
     http:
