@@ -15,6 +15,6 @@ spec:
       interval: 5m
   releaseName: grafana
   values:
-    - persistence:
-        type: pvc
-        enabled: true
+    persistence:
+      type: pvc
+      enabled: true
