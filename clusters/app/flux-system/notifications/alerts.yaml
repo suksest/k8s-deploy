@@ -5,7 +5,7 @@ metadata:
   name: discord-alert
   namespace: flux-system
 spec:
-  eventSeverity: error
+  eventSeverity: info
   eventSources:
   - kind: Kustomization
     name: '*'
