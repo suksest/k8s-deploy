@@ -25,11 +25,13 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: app-ingress
-annotations:
-  kubernetes.io/ingress.class: nginx
-  cert-manager.io/cluster-issuer: letsencrypt-prod
+  name: product
+  labels:
+    name: product
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
     - product.setyaji.my.id
@@ -37,7 +39,7 @@ spec:
     - grafana.setyaji.my.id
     secretName: app-tls
   rules:
-  - host: "product.setyaji.my.id"
+  - host: product.setyaji.my.id
     http:
       paths:
       - pathType: Prefix
@@ -45,9 +47,19 @@ spec:
         backend:
           service:
             name: product
-            port:
+            port: 
               number: 80
-  - host: "transaction.setyaji.my.id"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: transaction
+  labels:
+    name: transaction
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: transaction.setyaji.my.id
     http:
       paths:
       - pathType: Prefix
@@ -55,9 +67,19 @@ spec:
         backend:
           service:
             name: transaction
-            port:
+            port: 
               number: 80
-  - host: "grafana.setyaji.my.id"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana
+  labels:
+    name: grafana
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: grafana.setyaji.my.id
     http:
       paths:
       - pathType: Prefix
@@ -65,5 +87,5 @@ spec:
         backend:
           service:
             name: grafana
-            port:
+            port: 
               number: 80
