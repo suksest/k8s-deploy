@@ -5,3 +5,4 @@ resources:
   - core
   - monitoring
   - ingress-nginx
+  - cert-manager
