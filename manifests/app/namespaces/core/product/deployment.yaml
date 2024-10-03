@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: product
-        image: paulbouwer/hello-kubernetes:latest
+        image: paulbouwer/hello-kubernetes:1.10.1
         resources:
           limits:
             memory: "128Mi"
