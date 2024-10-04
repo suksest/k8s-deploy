@@ -26,8 +26,13 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: CONSUL_ADDRESS
+        - name: ENVIRONMENT
           valueFrom:
             secretKeyRef:
-              name: consul-secret
-              key: CONSUL_ADDRESS
+              name: app-secret
+              key: ENVIRONMENT
+        - name: POSTGRES_CONN
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: POSTGRES_CONN
