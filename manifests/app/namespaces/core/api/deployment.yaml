@@ -26,9 +26,9 @@ spec:
         ports:
         - containerPort: 8080
         env:
-          - name: CONSUl_ADDRESS
+          - name: CONSUL_ADDRESS
             valueFrom:
               secretKeyRef:
                 name: consul-secret
-                key: CONSUl_ADDRESS
+                key: CONSUL_ADDRESS
 
