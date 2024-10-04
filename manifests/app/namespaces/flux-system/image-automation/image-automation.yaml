@@ -14,7 +14,7 @@ spec:
     commit:
       author:
         name: Flux
-        email:
+        email: fluxcdbot@example.com
       messageTemplate: 'Updated image: {{range .Changed.Changes}}{{print .OldValue}} -> {{println .NewValue}}{{end}}'
     push:
       branch: main
