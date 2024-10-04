@@ -6,3 +6,5 @@ metadata:
 spec:
   image: registry.digitalocean.com/studidevops-sukma/books-api
   interval: 5m
+  secretRef:
+    name: regcred
