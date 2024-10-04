@@ -18,11 +18,11 @@ spec:
         image: registry.digitalocean.com/studidevops-sukma/books-api:7 # {"$imagepolicy": "flux-system:api"}
         resources:
           limits:
+            memory: "500Mi"
+            cpu: "1"
+          requests:
             memory: "128Mi"
             cpu: "500m"
-          requests:
-            memory: "64Mi"
-            cpu: "100m"
         ports:
         - containerPort: 8080
         env:
