@@ -7,3 +7,4 @@ resources:
   - ingress-nginx
   - cert-manager
   - consul
+  - flux-system
