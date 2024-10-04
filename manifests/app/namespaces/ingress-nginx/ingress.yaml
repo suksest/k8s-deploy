@@ -30,6 +30,14 @@ spec:
   type: ExternalName
   externalName: consul.consul.svc
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api
+spec:
+  type: ExternalName
+  externalName: api.core.svc
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
