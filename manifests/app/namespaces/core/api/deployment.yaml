@@ -15,7 +15,7 @@ spec:
       - name: regcred
       containers:
       - name: api
-        image: studidevops-sukma/books-api:4
+        image: registry.digitalocean.com/studidevops-sukma/books-api:4
         resources:
           limits:
             memory: "128Mi"
