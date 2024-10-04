@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - ../../../../modules/helm/consul/helm-repository.yaml
+  - release.yaml
