@@ -13,8 +13,7 @@ spec:
         branch: main
     commit:
       author:
-        email: fluxcdbot@users.noreply.github.com
-        name: fluxcdbot
+        name: Flux
       messageTemplate: 'Updated image: {{range .Changed.Changes}}{{print .OldValue}} -> {{println .NewValue}}{{end}}'
     push:
       branch: main
