@@ -25,14 +25,6 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8080
-        env:
-        - name: ENVIRONMENT
-          valueFrom:
-            secretKeyRef:
-              name: app-secret
-              key: ENVIRONMENT
-        - name: POSTGRES_CONN
-          valueFrom:
-            secretKeyRef:
-              name: app-secret
-              key: POSTGRES_CONN
+        envFrom:
+        - secretRef:
+            name: app-secret
