@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@gitlab.com/sukmasetyaji/k8s-deploy
+  url: https://gitlab.com/sukmasetyaji/k8s-deploy.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
