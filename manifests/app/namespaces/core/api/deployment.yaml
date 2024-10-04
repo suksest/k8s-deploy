@@ -15,7 +15,7 @@ spec:
       - name: regcred
       containers:
       - name: api
-        image: registry.digitalocean.com/studidevops-sukma/books-api:4 # {"$imagepolicy": "flux-system:api"}
+        image: registry.digitalocean.com/studidevops-sukma/books-api:5 # {"$imagepolicy": "flux-system:api"}
         resources:
           limits:
             memory: "128Mi"
@@ -26,9 +26,8 @@ spec:
         ports:
         - containerPort: 8080
         env:
-          - name: CONSUL_ADDRESS
-            valueFrom:
-              secretKeyRef:
-                name: consul-secret
-                key: CONSUL_ADDRESS
-
+        - name: CONSUL_ADDRESS
+          valueFrom:
+            secretKeyRef:
+              name: consul-secret
+              key: CONSUL_ADDRESS
