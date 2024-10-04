@@ -5,6 +5,8 @@ metadata:
 spec:
   imageRepositoryRef:
     name: api
+  filterTags:
+    pattern: '^[0-9]+$'
   policy:
     numerical:
       order: asc
