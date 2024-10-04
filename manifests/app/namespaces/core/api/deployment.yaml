@@ -15,7 +15,7 @@ spec:
       - name: regcred
       containers:
       - name: api
-        image: registry.digitalocean.com/studidevops-sukma/books-api:7 # {"$imagepolicy": "flux-system:api"}
+        image: registry.digitalocean.com/studidevops-sukma/books-api:8 # {"$imagepolicy": "flux-system:api"}
         resources:
           limits:
             memory: "500Mi"
