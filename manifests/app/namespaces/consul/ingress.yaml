@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: consul
+  labels:
+    name: consul
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - consul.setyaji.my.id
+    secretName: consul-tls
+  rules:
+  - host: consul.setyaji.my.id
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: consul
+            port: 
+              number: 80
