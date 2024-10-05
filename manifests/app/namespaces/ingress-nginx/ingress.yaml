@@ -41,26 +41,6 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: grafana
-  labels:
-    name: grafana
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: grafana.setyaji.my.id
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: grafana
-            port: 
-              number: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
   name: consul
   labels:
     name: consul
