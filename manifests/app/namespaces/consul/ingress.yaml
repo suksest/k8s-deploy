@@ -21,6 +21,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: consul
+            name: consul-consul-ui
             port: 
               number: 80
