@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ../../../../../modules/helm/prometheus/helm-repository.yaml
+  - release.yaml
