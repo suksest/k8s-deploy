@@ -5,3 +5,4 @@ resources:
   - namespace.yaml
   - ../../../../modules/helm/grafana/helm-repository.yaml
   - release.yaml
+  - ingress.yaml
