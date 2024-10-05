@@ -3,4 +3,6 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - grafana
+  - ../../../../../modules/helm/grafana/helm-repository.yaml
+  - release.yaml
+  - ingress.yaml
